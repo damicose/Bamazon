@@ -20,6 +20,21 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId + "\n");
   console.log("Displaying Product Array")
   readProducts();
+  inquirer
+  .prompt([{
+    type: "input",
+    message: "Enter the item_id of the product you'd like to purchase.",
+    name: "whichProd"
+  },
+{
+  type: "input",
+  message: "How many would you like to purchase?",
+  name: "howMany"
+}
+])
+.then(function(inquirerResponse) {
+if ()
+
 });
 
 function readProducts() {
