@@ -14,31 +14,31 @@ CREATE TABLE products (
 );
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ();
+VALUES ("Shirt", "Clothing", 51.00, 3);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ();
+VALUES ("Towel", "Home", 14.99, 10);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ();
+VALUES ("Lawn Mower", "Yard", 250.00, 1);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ();
+VALUES ("Vacuum", "Home", 78.50, 5);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ();
+VALUES ("Couch", "Furniture", 399.99, 7);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ();
+VALUES ("Laptop", "Electronics", 899.99, 2);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ();
+VALUES ("Playstation 5", "Electronics", 499.99, 5);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ();
+VALUES ("Sponge", "Home", 4.99, 200);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ();
+VALUES ("Starving, Crazed Weasel", "Pet", 40.00, 12);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ();
+VALUES ("Meaning of Life", "Existential", 4.20, 0);
