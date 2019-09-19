@@ -33,7 +33,18 @@ connection.connect(function(err) {
 }
 ])
 .then(function(inquirerResponse) {
-if ()
+  let prodQuan = (
+    connection.query(
+"SELECT FROM "
+    )
+  )
+if (inquirerResponse.howMany > prodQuan) {
+  console.log("Error: Desired Quantity is greater than Available Stock")
+}
+else {
+  console.log("Purchase successful! Adjusting stock levels...")
+  updateProduct();
+}
 
 });
 
@@ -42,9 +53,29 @@ function readProducts() {
     if (err) throw err;
     // Log all results of the SELECT statement
     console.log(res);
-    connection.end();
+    // connection.end();
   });
 }
+
+function updateProduct() {
+  // console.log("Updating all Rocky Road quantities...\n");
+  connection.query(
+    "UPDATE products SET ? WHERE ?",
+    [
+      {
+        stock_quantity: (parseInt(stock_quantity) - parseInt(inquirerResponse.howMany))
+      },
+      {
+        item_id: inquirerResponse.whichProd
+      }
+    ],
+    function(err, res) {
+      if (err) throw err;
+      console.log("Update Successful! Thank you for shopping with Bamazon~~~");
+      // Call deleteProduct AFTER the UPDATE completes
+      // deleteProduct();
+    }
+  );
 
 // function createProduct() {
 //   console.log("Inserting a new product...\n");
@@ -67,25 +98,7 @@ function readProducts() {
 //   console.log(query.sql);
 // }
 
-// function updateProduct() {
-//   console.log("Updating all Rocky Road quantities...\n");
-//   let query = connection.query(
-//     "UPDATE products SET ? WHERE ?",
-//     [
-//       {
-//         quantity: 100
-//       },
-//       {
-//         flavor: "Rocky Road"
-//       }
-//     ],
-//     function(err, res) {
-//       if (err) throw err;
-//       console.log(res.affectedRows + " products updated!\n");
-//       // Call deleteProduct AFTER the UPDATE completes
-//       deleteProduct();
-//     }
-//   );
+
 
 //   // logs the actual query being run
 //   console.log(query.sql);
