@@ -40,11 +40,8 @@ connection.connect(function (err) {
 
         `SELECT * FROM products`,
         function (err, res) {
-          console.log(res[(answer.whichProd - 1)].stock_quantity);
-          // console.log(res);
-          console.log(res[(answer.whichProd - 1)]);
           if (answer.howMany > res[(answer.whichProd - 1)].stock_quantity) {
-            console.log("Error: Desired Quantity is greater than Available Stock")
+            console.log("Error: Desired Quantity is greater than Available Stock. Do Better Next Time!")
             connection.end();
           } else {
             console.log("Purchase successful! Adjusting stock levels...")
