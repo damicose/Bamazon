@@ -52,6 +52,6 @@ Purchase Failure:
     * MySQL Workbench
     * MAMP
 
-## State your role in the app development
+## My Role
 
 Guide for the overall structure of the app was provided by Coding Boot Camp Instructor. All development and coding beyond that were done by yours truly. Except for the parts that don't work--that's their fault.
