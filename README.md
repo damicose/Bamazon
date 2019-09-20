@@ -26,24 +26,20 @@ The user is then prompted* to enter the ID of their desired item followed by ano
 
 ## Screenshots
 
-Movie with Default (Mr. Nobody):
-![Movie With Default (Mr. Nobody)](https://github.com/damicose/liri-node-app/blob/master/assets/movie%20default.jpg?raw=true)
+Table (Initial):
+![Table (Initial)](https://github.com/damicose/Bamazon/blob/master/assets/initialTable.jpg?raw=true)
 
-Movie with Term Input:
-![Movie With Query Input](https://github.com/damicose/liri-node-app/blob/master/assets/movie%20query.jpg?raw=true)
+VSC Initial:
+![VSC Initial](https://github.com/damicose/Bamazon/blob/master/assets/purchaseFailure.jpg?raw=true)
 
-Track with Default (The Sign):
-![Track Default (The Sign)](https://github.com/damicose/liri-node-app/blob/master/assets/spotify%20default.jpg?raw=true)
+Purchase Success:
+![Purchase Success](https://github.com/damicose/Bamazon/blob/master/assets/purchaseSuccess.jpg?raw=true)
 
-Track with Term Input:
-![Track With Query Input](https://github.com/damicose/liri-node-app/blob/master/assets/spotify%20query.jpg?raw=true)
+Table (Post-Purchase Update):
+![Table (Post-Purchase Update)](https://github.com/damicose/Bamazon/blob/master/assets/updatedTable.jpg?raw=true)
 
-Concert with Default (Cher):
-![Concert Default (Cher)](https://github.com/damicose/liri-node-app/blob/master/assets/concert%20default%20(cher).jpg?raw=true)
-
-Concert with Term Input:
-![Concert With Query Input](https://github.com/damicose/liri-node-app/blob/master/assets/concert%20query.jpg?raw=true)
-
+Purchase Failure:
+![Purchase Failure](https://github.com/damicose/Bamazon/blob/master/assets/vscInitial.jpg?raw=true)
 
 ## Technologies
 
