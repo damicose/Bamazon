@@ -34,7 +34,10 @@ connection.connect(function (err) {
     ])
     .then(function (answer) {
       connection.query(
-        // With assistance from SO (https://stackoverflow.com/questions/20819826/how-to-pass-parameters-to-mysql-query-callback-in-nodejs)
+
+        // With assistance from SO (https://stackoverflow.com/questions/20819826/how-to-pass-parameters-to-mysql-query-callback-in-nodejs) 
+        // & ice cream CRUD activity (Section 12, Activity 9)
+
         `SELECT * FROM products`,
         function (err, res) {
           console.log(res[(answer.whichProd - 1)].stock_quantity);
@@ -48,11 +51,7 @@ connection.connect(function (err) {
             updateProduct();
           }
 
-
-
-
           function updateProduct() {
-            // console.log("Updating all Rocky Road quantities...\n");
             connection.query(
               "UPDATE products SET ? WHERE ?",
               [{
@@ -65,29 +64,18 @@ connection.connect(function (err) {
               function (err, res) {
                 if (err) throw err;
                 console.log("Update Successful! Thank you for shopping with Bamazon~~~");
-                // Call deleteProduct AFTER the UPDATE completes
-                // deleteProduct();
               }
             );
+            connection.end();
           }
-
-
-
-
-
-
         }
       )
-
-
     });
 
   function readProducts() {
     connection.query("SELECT * FROM products", function (err, res) {
       if (err) throw err;
-      // Log all results of the SELECT statement
       console.log(res);
-      // connection.end();
     });
   }
 })
