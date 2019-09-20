@@ -37,10 +37,10 @@ connection.connect(function (err) {
         // With assistance from SO (https://stackoverflow.com/questions/20819826/how-to-pass-parameters-to-mysql-query-callback-in-nodejs)
         `SELECT * FROM products`,
         function (err, res) {
-          console.log(res[(answer.howMany - 1)].stock_quantity);
+          console.log(res[(answer.whichProd - 1)].stock_quantity);
           // console.log(res);
-          console.log(res[(answer.howMany - 1)]);
-          if (answer.howMany > res[(answer.howMany - 1)].stock_quantity) {
+          console.log(res[(answer.whichProd - 1)]);
+          if (answer.howMany > res[(answer.whichProd - 1)].stock_quantity) {
             console.log("Error: Desired Quantity is greater than Available Stock")
             connection.end();
           } else {
@@ -56,7 +56,7 @@ connection.connect(function (err) {
             connection.query(
               "UPDATE products SET ? WHERE ?",
               [{
-                  stock_quantity: (parseInt(res) - parseInt(answer.howMany))
+                  stock_quantity: (res[(answer.whichProd - 1)].stock_quantity - parseInt(answer.howMany))
                 },
                 {
                   item_id: answer.whichProd
